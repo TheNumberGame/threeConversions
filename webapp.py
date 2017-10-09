@@ -4,20 +4,22 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/")
 def render_main():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route("/response")
 def render_response():
     
-    color = request.args['color']
+    answer = request.args['home']
     #request object
     #args is = MultiDict (multiple values for one key)
     #The information in args is visible in the url for the page being requested
-    if color == 'blue':
-        reply = "Thats my favorite color too!"
-    else:
-        reply = "My favorite colors blue"
-    return render_template('response.html', response = reply)
+    if color == 'feet to meters':
+        reply = 
+    elif:
+        reply =     
+    else
+        reply = 
+    return render_template(reply)
         
 if __name__=="__main__":
     app.run(debug=False, port=54321)
