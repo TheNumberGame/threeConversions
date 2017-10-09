@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}<title>
+  </head>
+  <body>
+   <form action='/response'>
+      {% block question %}{% end block %}<br>
+      <input type="text" name="{% block name}{% endblock %}">
+      <br><br>
+      <input type="submit">
+   </form>
+  </body>
+</html>
