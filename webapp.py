@@ -7,10 +7,7 @@ def render_main():
     return render_template('index.html')
 
 @app.route("/ftm")
-def render_main():
-    renter_template('ftm.html')
-    
-def render_response():
+def render_ftm():
     
     answer = float(request.args['ft']) * 0.3048
     
