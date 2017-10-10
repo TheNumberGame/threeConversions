@@ -3,23 +3,15 @@ from flask import Flask, url_for, render_template, request
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
 @app.route("/")
-def render_main():
-    return render_template('index.html')
+#def render_main():
+#    return render_template('index.html')
 
-@app.route("/response")
+@app.route("/ftm")
 def render_response():
     
-    answer = request.args['home']
-    #request object
-    #args is = MultiDict (multiple values for one key)
-    #The information in args is visible in the url for the page being requested
-    if color == 'feet to meters':
-        reply = 
-    elif:
-        reply =     
-    else
-        reply = 
-    return render_template(reply)
+    answer = float(request.args['ft']) * 0.3048
+    
+    return render_template('ftm.html', response = answer)
         
 if __name__=="__main__":
     app.run(debug=False, port=54321)
