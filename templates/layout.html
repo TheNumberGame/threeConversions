@@ -7,7 +7,9 @@
    <form action='/response'>
       <br>{% block question %}{% end block %}<br>
       <input type="text" name="{% block name}{% endblock %}">
-      <br><br>
+      <br>
+      <p>{% block res %}{% endblock %}</p>
+      <br>
       <input type="submit">
    </form>
   </body>
