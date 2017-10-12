@@ -10,25 +10,25 @@ def render_main():
 def render_ftm():
     return render_template('ftm.html')
 
-@app.route("/etm")
+""""@app.route("/etm")
 def render_etm():
-    return render_template('etm.html')
+    return render_template('etm.html')""""
 
-@app.route("/Ltml")
+""""@app.route("/Ltml")
 def render_Ftml():
-    return render_template('Ltml.html')
+    return render_template('Ltml.html')""""
     
 @app.route("/response")
 def render_response():
     if 'ft' in request.args[]:
         answer = float(request.args['ft']) * 0.3048
         return render_template('response.html', response = answer)
-    elif 'eh' in request.args[]:
+   """" elif 'eh' in request.args[]:
         answer = (float(request.args['eh'])*9.81)/3.711
         return render_template('response.html', response = answer)
     else 'lr' in request.args[]:
         answer = float(request.args['lr'])*1000
-        return render_template('response.html', response = answer)
+        return render_template('response.html', response = answer)""""
     
         
 if __name__=="__main__":
