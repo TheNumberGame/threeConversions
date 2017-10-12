@@ -21,11 +21,9 @@ def render_Ltml():
 @app.route("/response")
 def render_response():
     if 'ft' in request.args:
-        answer = float(request.args['ft']) * 0.3048
-       
+        answer = float(request.args['ft']) * 0.3048     
     elif 'eh' in request.args:
         answer = (float(request.args['eh'])*9.81)/3.711
-        
     else 'lr' in request.args:
         answer = float(request.args['lr'])*1000
         
