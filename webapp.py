@@ -8,12 +8,12 @@ def render_main():
 
 @app.route("/ftm")
 def render_ftm():
-     return render_template('ftm.html')
+    return render_template('ftm.html')
     
 @app.route("/response")
 def render_response():
-     answer = float(request.args['ft']) * 0.3048
-     
+    
+    answer = float(request.args['ft']) * 0.3048
     return render_template('response.html', response = answer)
         
 if __name__=="__main__":
