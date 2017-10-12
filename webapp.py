@@ -20,13 +20,13 @@ def render_Ltml():
     
 @app.route("/response")
 def render_response():
-    if 'ft' in request.args[]:
+    if 'ft' in request.args[] == None:
         answer = float(request.args['ft']) * 0.3048
        
-    elif 'eh' in request.args[]:
+    elif 'eh' in request.args[] == None:
         answer = (float(request.args['eh'])*9.81)/3.711
         
-    else 'lr' in request.args[]:
+    else 'lr' in request.args[] == None:
         answer = float(request.args['lr'])*1000
         
     return render_template('response.html', response = answer)
