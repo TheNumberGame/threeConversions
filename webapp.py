@@ -8,10 +8,13 @@ def render_main():
 
 @app.route("/ftm")
 def render_ftm():
+     return render_template('ftm.html')
     
-    answer = float(request.args['ft']) * 0.3048
-    
-    return render_template('ftm.html', response = answer)
+@app.route("/response")
+def render_response():
+     answer = float(request.args['ft']) * 0.3048
+     
+    return render_template('response.html', response = answer)
         
 if __name__=="__main__":
     app.run(debug=False, port=54321)
