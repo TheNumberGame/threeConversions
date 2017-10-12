@@ -18,7 +18,7 @@ def render_etm():
 def render_Ftml():
     return render_template('Ltml.html')
     
-@app.route("/response")
+""""@app.route("/response")
 def render_response():
     if 'ft' in request.args[]:
         answer = float(request.args['ft']) * 0.3048
@@ -28,7 +28,7 @@ def render_response():
         return render_template('response.html', response = answer)
     else 'lr' in request.args[]:
         answer = float(request.args['lr'])*1000
-        return render_template('response.html', response = answer)
+        return render_template('response.html', response = answer)""""
     
         
 if __name__=="__main__":
