@@ -2,7 +2,7 @@ from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
-@app.route("/")
+""""@app.route("/")
 def render_main():
     return render_template('index.html')
 
@@ -28,7 +28,7 @@ def render_response():
         return render_template('response.html', response = answer)
     else 'lr' in request.args[]:
         answer = float(request.args['lr'])*1000
-        return render_template('response.html', response = answer)
+        return render_template('response.html', response = answer)"""""
     
         
 if __name__=="__main__":
