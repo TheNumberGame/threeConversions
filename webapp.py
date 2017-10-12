@@ -9,6 +9,14 @@ def render_main():
 @app.route("/ftm")
 def render_ftm():
     return render_template('ftm.html')
+
+@app.route("/etm")
+def render_etm():
+    return render_template('etm.html')
+
+@app.route("Ltml")
+def render.Ftml():
+    return render_template('Ltml.html')
     
 @app.route("/response")
 def render_response():
@@ -18,9 +26,9 @@ def render_response():
     elif 'eh' in request.args[]:
         answer = (float(request.args['eh'])*9.81)/3.711
         return render_template('response.html', response = answer)
-    """"else 'lr' in request.args[]:
+    else 'lr' in request.args[]:
         answer = float(request.args['lr'])*1000
-        return render_template('response.html', response = answer)""""
+        return render_template('response.html', response = answer)
     
         
 if __name__=="__main__":
