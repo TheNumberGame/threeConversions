@@ -10,9 +10,9 @@ def render_main():
 def render_ftm():
     return render_template('ftm.html')
 
-@app.route("/etm")
+""""@app.route("/etm")
 def render_etm():
-    return render_template('etm.html')
+    return render_template('etm.html')""""
 
 """"@app.route("/Ltml")
 def render_Ftml():
