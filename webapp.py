@@ -18,6 +18,9 @@ def render_response():
     elif 'eh' in request.args[]:
         answer = (float(request.args['eh'])*9.81)/3.711
         return render_template('response.html', response = answer)
+    else 'lr' in request.args[]:
+        answer = float(request.args['lr'])*1000
+        return render_template('response.html', response = answer)
     
         
 if __name__=="__main__":
