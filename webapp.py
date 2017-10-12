@@ -6,15 +6,15 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('index.html')
 
-"""""@app.route("/ftm")
+@app.route("/ftm")
 def render_ftm():
-    return render_template('ftm.html')""""
+    return render_template('ftm.html')
 
-""""@app.route("/etm")
+@app.route("/etm")
 def render_etm():
-    return render_template('etm.html')""""
+    return render_template('etm.html')
 
-""""@app.route("/Ltml")
+@app.route("/Ltml")
 def render_Ftml():
     return render_template('Ltml.html')
     
@@ -28,7 +28,7 @@ def render_response():
         return render_template('response.html', response = answer)
     else 'lr' in request.args[]:
         answer = float(request.args['lr'])*1000
-        return render_template('response.html', response = answer)""""
+        return render_template('response.html', response = answer)
     
         
 if __name__=="__main__":
