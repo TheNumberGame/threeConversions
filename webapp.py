@@ -23,7 +23,7 @@ def render_response():
     if 'ft' in request.args[]:
         answer = float(request.args['ft']) * 0.3048
         return render_template('response.html', response = answer)
-   elif 'eh' in request.args[]:
+    elif 'eh' in request.args[]:
         answer = (float(request.args['eh'])*9.81)/3.711
         return render_template('response.html', response = answer)
     else 'lr' in request.args[]:
