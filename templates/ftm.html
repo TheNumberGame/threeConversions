@@ -1,6 +1,11 @@
 {% extends 'layout.html' %}
 {% active_page = 'ftm' %}
 {% block title %}Feet to Meters{% endblock %}
-{% block question %}Feet to Meters Converter.{% endblock %}
-{% block name %}ft{% endblock %}
-
+{% block info %}
+  <form action='/response'>
+      <br>Feet to Meters<br>
+      <input type="text" name="ft">
+      <br>
+      <input type="submit">
+   </form>
+{% endblock %}
