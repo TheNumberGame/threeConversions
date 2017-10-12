@@ -12,8 +12,11 @@ def render_ftm():
     
 @app.route("/response")
 def render_response():
-    if not request.args.get['ft'] == None:
+    if not request.args.get['ft'] == none:
         answer = float(request.args['ft']) * 0.3048
+        return render_template('response.html', response = answer)
+    elif not request.args.get['eh'] == none:
+        answer = (float(request.args['eh'])*9.81)/3.711
         return render_template('response.html', response = answer)
     
         
