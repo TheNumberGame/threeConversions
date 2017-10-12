@@ -14,11 +14,11 @@ def render_ftm():
 def render_etm():
     return render_template('etm.html')
 
-@app.route("/Ltml")
+""""@app.route("/Ltml")
 def render_Ftml():
     return render_template('Ltml.html')
     
-""""@app.route("/response")
+@app.route("/response")
 def render_response():
     if 'ft' in request.args[]:
         answer = float(request.args['ft']) * 0.3048
