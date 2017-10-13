@@ -25,7 +25,7 @@ def render_response():
     elif 'eh' in request.args:
         answer = (float(request.args['eh'])*9.81)/3.711
     elif 'lr' in request.args:
-        answer = float(request.args['lr'])*1000
+        answer = String(float(request.args['lr'])*1000)+'mL'
         
     return render_template('response.html', response = answer)
        
