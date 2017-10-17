@@ -24,17 +24,17 @@ def render_response():
         try:
             answer = str(float(request.args['ft']) * 0.3048)+'m'
         except:
-            answer = "An error has occured."
+            answer = "An error has occured: Do not add letters."
     elif 'eh' in request.args:
         try:
             answer = str((float(request.args['eh'])/9.81)*3.711)+'lbs'
         except:
-            answer = "An error has occured."
+            answer = "An error has occured: Do not add letters."
     elif 'lr' in request.args:
         try:
             answer = str(float(request.args['lr'])*1000)+'mL'
         except:
-            answer = "An error has occured."
+            answer = "An error has occured: Do not add letters."
             
     return render_template('response.html', response = answer)
        
