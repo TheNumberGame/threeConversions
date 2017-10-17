@@ -26,9 +26,15 @@ def render_response():
         except:
             answer = "An error has occured."
     elif 'eh' in request.args:
-        answer = str((float(request.args['eh'])/9.81)*3.711)+'lbs'
+        try:
+            answer = str((float(request.args['eh'])/9.81)*3.711)+'lbs'
+         except:
+            answer = "An error has occured."
     elif 'lr' in request.args:
-        answer = str(float(request.args['lr'])*1000)+'mL'
-        
+        try:
+            answer = str(float(request.args['lr'])*1000)+'mL'
+         except:
+            answer = "An error has occured."
+            
     return render_template('response.html', response = answer)
        
